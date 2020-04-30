@@ -1,0 +1,20 @@
+{
+  "name": "grid-snap",
+  "version": "1.0.0",
+  "description": "Simple, multidimensional 'snap to grid' math utility",
+  "main": "snap.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "snap",
+    "multidimensional",
+    "unidimensional"
+  ],
+  "author": "Kurt Ferreira <kurt@reload.co.za>",
+  "license": "ISC",
+  "dependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^7.1.2"
+  }
+}
