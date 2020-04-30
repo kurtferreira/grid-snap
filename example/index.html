@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="" />
+  <meta charset="utf-8">
+  <title>GridSnap Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../dist/snap.min.js"></script>
+  <style>
+    html, 
+    body,
+    .grid { height: 100%; width: 100%; margin: 0; background-image: url(grid.png); } 
+    .blob { display:block;  background-color: #440000; width:6px; height: 6px;}
+    .ptr { position:absolute; display:block; }
+    .coord { font-family: monospace; font-size:10px; }
+  </style>
+</head>
+
+<body>
+
+  <div class="box grid" style="position:relative; display:block;">
+    <div class="ptr">
+      <span class="blob"></span>
+      <span class="coord"></span>
+    </div>
+  </div>
+  
+<script>
+    var ptr = document.querySelector('.ptr');
+    var ptrTxt = document.querySelector('.coord')
+    
+    document.querySelector('.box').addEventListener('mousemove', onMouseMove);
+
+    function onMouseMove(e) {
+      var x = e.clientX,
+          y = e.clientY;
+
+      x = snap(x, 100);
+      y = snap(y, 100);
+
+      ptr.style.left  = (x-3) + "px";
+      ptr.style.top = (y-3) + "px";
+      ptrTxt.innerHTML = x + "," + y;
+    }
+</script>
+
+</body>
+</html>
