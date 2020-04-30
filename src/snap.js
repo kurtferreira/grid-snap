@@ -1,8 +1,8 @@
-const snap = (point, spacing) => {
+let snap = function (point, spacing) {
     if (typeof point === 'undefined') return 0;
     if (typeof spacing === 'undefined' || spacing === 0) return point;
 
-    const getPoint = (p,u) => {
+    let getPoint = function (p,u) {
         const mod = (p % u);
         const central = mod / u;
         return (central > 0.5) ? p + (u - mod) : p - mod;
@@ -23,4 +23,6 @@ const snap = (point, spacing) => {
     return getPoint(point, spacing);    
 };
 
-module.exports = snap;
+if(typeof module !== 'undefined' && module.exports)
+    module.exports = snap;
+else window.snap = snap;

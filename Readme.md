@@ -7,16 +7,17 @@ Grid snap is a zero-dependency library that allows you to pass through a point (
 
 # Installation
 ----
-To install, simply include the JS file or using NPM:
+To install, simply include the JS file (`dist/snap.min.js`) or using NPM:
 ```
 npm i --save grid-snap
 ```
+
 
 # Usage
 ----
 To snap a unidimensional number to a grid spacing of 5 units:
 ```
-let snap = require('grid-snap');
+let snap = require('grid-snap'); // for nodejs, for browser window.snap is avaiable (as just snap(...))
 
 let pointA = snap(1.4, 5) // returns 0
 let pointB = snap(2.6, 5) // returns 5
@@ -31,10 +32,6 @@ let pointA = snap([50, 24], [64,64])
 // as an object (returns {x: 16, y:0})
 let pointB = snap({x: 14.5, y: 2.5}, {x: 16, y: 16})
 ```
-
-# Todo
-
-- Rig the code to allow for front-end use (at the moment its nodejs purpose-built)
 
 License
 ----

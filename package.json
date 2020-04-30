@@ -2,19 +2,24 @@
   "name": "grid-snap",
   "version": "1.0.0",
   "description": "Simple, multidimensional 'snap to grid' math utility",
-  "main": "snap.js",
+  "main": "index.js",
+  "repository": "https://github.com/reload-kurt/grid-snap",
   "scripts": {
-    "test": "mocha"
+    "build": "minify src/snap.js > dist/snap.min.js",
+    "test": "mocha src/test.js"
   },
   "keywords": [
     "snap",
+    "grid",
     "multidimensional",
     "unidimensional"
   ],
   "author": "Kurt Ferreira <kurt@reload.co.za>",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "expect.js": "^0.3.1",
+    "minify": "^5.1.1",
     "mocha": "^7.1.2"
   }
 }
