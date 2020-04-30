@@ -43,6 +43,10 @@ describe('Snap', function() {
             expect(snap([0.49, 0], [1, 1])).to.eql([0, 0]);
         });
 
+        it('should return [1, 0] when point is [0.51, 0] and spacing is [1, 1]', function() {
+            expect(snap([0.51, 0], [1, 1])).to.eql([1, 0]);
+        });
+
         it('should return {x: 0, y: 0} when point is {x: 0.49, y: 0} and spacing is {x: 1, y: 1}', function() {
             expect(snap({x: 0.49, y: 0}, {x:1, y:1})).to.eql({x: 0, y: 0});
         });

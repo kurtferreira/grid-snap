@@ -14,7 +14,9 @@ let snap = function (point, spacing) {
 
         let points = point;
 
-        Object.keys(point).forEach(row => points[row] = getPoint(points[row], spacing[row]));
+        Object.keys(point).forEach(function(row) { 
+            points[row] = getPoint(points[row], spacing[row]);
+        });
 
         return points;
     } 
