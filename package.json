@@ -1,5 +1,5 @@
 {
-  "name": "grid-snap",
+  "name": "@reload-kurt/grid-snap",
   "version": "1.0.0",
   "description": "Simple, multidimensional 'snap to grid' math utility",
   "main": "index.js",
