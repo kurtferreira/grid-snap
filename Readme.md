@@ -1,7 +1,7 @@
 # Grid Snap
 ----
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Node.js CI](https://github.com/reload-kurt/grid-snap/workflows/Node.js%20CI/badge.svg?branch=master)
 
 Grid snap is a zero-dependency library that allows you to pass through a point (or array of points) along with a grid-spacing metric which will return a similarly dimensioned variable of the points snapped to the spacing sent through.
 
